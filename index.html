@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dillon Corvino, PhD — Immunologist</title>
+  <meta name="description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology. University Hospital Bonn, Germany.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f5f4f0;
+      --surface: #ffffff;
+      --text:    #141412;
+      --muted:   #6b6860;
+      --subtle:  #9e9b95;
+      --accent:  #1d3d7a;
+      --border:  #dddbd5;
+      --serif:   'Fraunces', Georgia, serif;
+      --sans:    'Instrument Sans', system-ui, sans-serif;
+      --nav-h:   64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3.5rem;
+      height: var(--nav-h);
+      background: rgba(245,244,240,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.15rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); background: var(--border); }
+
+    .nav-cv {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      margin-left: 0.75rem;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .nav-cv:hover { background: #162e5e; }
+
+    /* ── HERO ── */
+    #home {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem 5rem 3.5rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1.hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h1.hero-name em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .hero-sub {
+      font-size: 0.92rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+      margin-bottom: 2.25rem;
+      line-height: 1.5;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 530px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-open {
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-open::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22a05a;
+      flex-shrink: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-primary {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      transition: background 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary:hover { background: #162e5e; transform: translateY(-1px); }
+
+    .btn-ghost {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.7rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: color 0.15s, border-color 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-ghost:hover { color: var(--text); border-color: var(--text); transform: translateY(-1px); }
+
+    /* ── HERO RIGHT ── */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 5rem 3.5rem;
+      background: var(--surface);
+    }
+
+    /* Photo: swap src to update; adjust object-position to reframe crop */
+    .photo-frame {
+      width: 185px;
+      height: 185px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--border);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+      flex-shrink: 0;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 10%;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .stat {
+      background: var(--surface);
+      padding: 1.25rem 1rem;
+      text-align: center;
+    }
+
+    .stat-n {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-l {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    .hero-meta {
+      width: 100%;
+      max-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 0.15rem;
+    }
+
+    .meta-row:last-child { border-bottom: none; }
+
+    .meta-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    .meta-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .meta-value a { color: var(--accent); text-decoration: none; }
+    .meta-value a:hover { text-decoration: underline; }
+
+    /* ── SECTION SHELL ── */
+    .section-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 7rem 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+    }
+
+    .section-num {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(29,61,122,0.08);
+      padding: 0.28rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    /* ── RESEARCH ── */
+    #research { background: var(--bg); }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+    }
+
+    .r-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .r-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+
+    .r-card-icon {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 1.1rem;
+      color: var(--accent);
+      opacity: 0.7;
+    }
+
+    .r-card h3 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    .r-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── SKILLS ── */
+    .skills-section {
+      margin-top: 0;
+    }
+
+    .skills-header {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .skill-col {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+    }
+
+    .skill-col-title {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .skill-list li {
+      font-size: 0.84rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .skill-list li::before {
+      content: '·';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.8rem;
+      border-radius: 100px;
+    }
+
+    /* ── PUBLICATIONS ── */
+    #publications {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.7;
+    }
+
+    .pub-meta a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .pub-meta a:hover { text-decoration: underline; }
+
+    .pub-year-label {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(29,61,122,0.07);
+      display: inline-block;
+      padding: 0.28rem 0.7rem;
+      border-radius: 3px;
+      margin: 2.5rem 0 1.25rem;
+    }
+
+    .pub-year-label:first-of-type { margin-top: 0; }
+
+    .pub-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-row:last-child { border-bottom: none; }
+
+    .pub-authors {
+      font-size: 0.82rem;
+      color: var(--subtle);
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .pub-authors strong { color: var(--text); font-weight: 600; }
+
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-venue {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .pub-doi {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      padding: 0.42rem 0.85rem;
+      border: 1px solid rgba(29,61,122,0.25);
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      margin-top: 0.1rem;
+      display: inline-block;
+    }
+
+    .pub-doi:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* ── CONTACT ── */
+    #contact { background: #141412; }
+
+    #contact .section-title { color: #fff; }
+    #contact .section-num { color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.07); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    .contact-intro {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .contact-intro strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .c-row { display: flex; flex-direction: column; gap: 0.2rem; }
+
+    .c-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .c-value { font-size: 0.97rem; color: rgba(255,255,255,0.8); }
+
+    .c-value a { color: #7da4e0; text-decoration: none; }
+    .c-value a:hover { text-decoration: underline; }
+
+    .contact-cv-block {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .btn-cv-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      text-decoration: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+
+    .btn-cv-contact:hover { background: rgba(255,255,255,0.18); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0c;
+      padding: 1.5rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p { font-size: 0.72rem; color: rgba(255,255,255,0.2); letter-spacing: 0.04em; }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+
+    /* ── SVG ICONS ── */
+    .icon { display: block; width: 100%; height: 100%; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+
+      #home { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 4.5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-right { padding: 3rem 1.5rem 4rem; }
+      .photo-frame { width: 150px; height: 150px; }
+      .stats-grid, .hero-meta { max-width: 100%; }
+
+      .section-wrap { padding: 4.5rem 1.5rem; }
+      .research-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-name">Dillon Corvino</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- CV download: replace href with path to your PDF file when hosted -->
+    <a href="CV_Dillon_Corvino.pdf" download class="nav-cv">Download CV</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left">
+    <span class="hero-eyebrow reveal">Postdoctoral Researcher · University Hospital Bonn</span>
+    <h1 class="hero-name reveal d1">Dillon Corvino<em>, PhD</em></h1>
+    <p class="hero-sub reveal d2">T cell &amp; NK cell biology &ensp;·&ensp; Immuno-oncology &ensp;·&ensp; Single-cell multi-omics</p>
+    <p class="hero-bio reveal d3">
+      Immunologist with 6+ years of postdoctoral experience across tumour immunology, viral immunity, and translational immuno-oncology. I combine wet-lab expertise in human primary tissue and genetic engineering with independent end-to-end single-cell and spatial multi-omics analysis — understanding cytotoxic lymphocyte biology and advancing cell therapy strategies from discovery through publication.
+    </p>
+    <p class="hero-open reveal d3">Open to industry roles in immuno-oncology and cell therapy across the EU and Australia</p>
+    <div class="hero-actions reveal d3">
+      <a href="CV_Dillon_Corvino.pdf" download class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+      <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank" rel="noopener" class="btn-ghost">Scholar</a>
+      <a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+      <a href="https://github.com/Eomesodermin" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Photo: to update, replace base64 data below. Adjust object-position to reframe crop. -->
+    <div class="photo-frame reveal">
+      <img src="photo.jpg" alt="Dillon Corvino" />
+    </div>
+
+    <div class="stats-grid reveal d1">
+      <div class="stat">
+        <div class="stat-n">970</div>
+        <div class="stat-l">Citations</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">15</div>
+        <div class="stat-l">h-index</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">6+</div>
+        <div class="stat-l">Yrs postdoc</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">€110k</div>
+        <div class="stat-l">Funding (PI)</div>
+      </div>
+    </div>
+
+    <div class="hero-meta reveal d2">
+      <div class="meta-row">
+        <span class="meta-label">Location</span>
+        <span class="meta-value">Bonn, Germany · EU work authorisation</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Institution</span>
+        <span class="meta-value">Abdullah Lab, University Hospital Bonn</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">ORCID</span>
+        <span class="meta-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank">0000-0003-0683-1369</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH + SKILLS -->
+<section id="research">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Research</h2>
+    </div>
+
+    <div class="research-grid">
+      <div class="r-card reveal">
+        <div class="r-card-icon">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <h3>Cytotoxic lymphocyte biology</h3>
+        <p>NK cell plasticity and dysfunction in the tumour microenvironment. CD8 T cell state transitions, type I IFN-driven dysfunction, and unconventional T cell subsets in anti-viral and anti-tumour immunity.</p>
+      </div>
+      <div class="r-card reveal d1">
+        <div class="r-card-icon">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 8h2v3h-2zM15 8h2v7h-2z"/>
+          </svg>
+        </div>
+        <h3>Single-cell &amp; spatial multi-omics</h3>
+        <p>Independent end-to-end pipelines across scRNA-seq, CITE-seq, scATAC-seq, and scTCR-seq on HPC. Spatial transcriptomics and high-multiplex imaging for tissue-resolved characterisation of immune niches.</p>
+      </div>
+      <div class="r-card reveal d2">
+        <div class="r-card-icon">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 9H17v1.5c0 .83-.67 1.5-1.5 1.5S14 11.33 14 10.5 14.67 9 15.5 9z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 15H7v-1.5c0-.83.67-1.5 1.5-1.5S10 12.67 10 13.5 9.33 15 8.5 15z"/>
+          </svg>
+        </div>
+        <h3>Cell engineering &amp; therapy</h3>
+        <p>CRISPR knock-out, knock-in, and overexpression in primary human NK and CD8 T cells. CAR-NK and CAR-T cell engineering with proof-of-concept data in preclinical models.</p>
+      </div>
+      <div class="r-card reveal d3">
+        <div class="r-card-icon">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>Translational immunology</h3>
+        <p>Reverse translational approaches linking clinical immune phenotypes to mechanistic discovery. Biomarker development from patient tissue through computational analysis to peer-reviewed publication.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="skills-section reveal">
+      <p class="skills-header">Core expertise</p>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <div class="skill-col-title">Wet Lab</div>
+          <ul class="skill-list">
+            <li>Spectral &amp; conventional flow cytometry (40+ colour panels)</li>
+            <li>FACS sorting &amp; tetramer staining</li>
+            <li>CRISPR KO, KI &amp; overexpression in primary NK / CD8 T cells</li>
+            <li>Lentiviral &amp; adenoviral delivery systems</li>
+            <li>Primary human tissue processing (tumour, PBMC, healthy tissue)</li>
+            <li>Air-liquid interface organoids &amp; tissue fragment cultures</li>
+            <li>Murine syngeneic &amp; humanised tumour models</li>
+            <li>LCMV acute &amp; chronic infection models</li>
+            <li>Functional assays: cytotoxicity, ICS, degranulation, proliferation</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title">Computational</div>
+          <ul class="skill-list">
+            <li>R / tidyverse (primary language)</li>
+            <li>scRNA-seq · CITE-seq · scATAC-seq · scTCR-seq</li>
+            <li>Seurat · Monocle · ArchR</li>
+            <li>Trajectory inference &amp; chromatin state modelling</li>
+            <li>Spatial transcriptomics &amp; high-multiplex imaging analysis</li>
+            <li>Bulk RNA-seq &amp; DNA-seq</li>
+            <li>HPC pipelines with Nextflow &amp; Singularity</li>
+            <li>GitHub version control &amp; reproducible workflows</li>
+            <li>Scientific visualisation (ggplot2, Adobe Illustrator)</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title">Leadership</div>
+          <ul class="skill-list">
+            <li>Independent research programme ownership</li>
+            <li>Full hiring cycle: 3 PhDs &amp; 2 research technicians</li>
+            <li>Scientific mentorship of 10+ PhD, MSc &amp; BSc students</li>
+            <li>PI on €100k BMBF GO-Bio Initial grant</li>
+            <li>International collaboration across 4 continents</li>
+            <li>Manuscript lead &amp; co-author on 20+ publications</li>
+            <li>Peer reviewer: Nature Comms, Immunity, Cancer Immunol Res</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Publications</h2>
+    </div>
+
+    <p class="pub-meta reveal">
+      Full list on <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank">Google Scholar</a> &ensp;·&ensp;
+      ORCID <a href="https://orcid.org/0000-0003-0683-1369" target="_blank">0000-0003-0683-1369</a> &ensp;·&ensp;
+      970 citations &ensp;·&ensp; h-index 15
+    </p>
+
+    <div class="reveal">
+
+      <span class="pub-year-label">2025</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors"><strong>Corvino D</strong>, Batstone M, Hughes BGM, Kempchen T, Ng SS, Salim N, et al.</p>
+          <p class="pub-title">Type I Interferon Drives a Cellular State Inert to TCR-Stimulation and Could Impede Effective T-Cell Differentiation in Cancer</p>
+          <p class="pub-venue">European Journal of Immunology, 2025</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1002/eji.202451371" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Turiello R, Ng SS, Tan E, … <strong>Corvino D</strong></p>
+          <p class="pub-title">NKG7 is a stable marker of cytotoxicity across immune contexts and within the tumor microenvironment</p>
+          <p class="pub-venue">European Journal of Immunology, 2025</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1002/eji.202551885" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <span class="pub-year-label">2024</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Giordano FA, Layer JP, … <strong>Corvino D</strong>, et al.</p>
+          <p class="pub-title">L-RNA aptamer-based CXCL12 inhibition combined with radiotherapy in newly-diagnosed glioblastoma: dose escalation of the phase I/II GLORIA trial</p>
+          <p class="pub-venue">Nature Communications, 2024</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1038/s41467-024-48416-9" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Hosni S, Kilian V, Klümper N, … <strong>Corvino D</strong>, et al.</p>
+          <p class="pub-title">Adipocyte Precursor-Derived NRG1 Promotes Resistance to FGFR Inhibition in Urothelial Carcinoma</p>
+          <p class="pub-venue">Cancer Research, 2024</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1158/0008-5472.CAN-23-1398" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Casey M, Lee C, Kwok WY, … <strong>Corvino D</strong>, et al.</p>
+          <p class="pub-title">Regulatory T cells hamper the efficacy of T-cell-engaging bispecific antibody therapy</p>
+          <p class="pub-venue">Haematologica, 2024</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.3324/haematol.2023.283758" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <span class="pub-year-label">2023</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors"><strong>Corvino D</strong>, Rommel D, Schneppenheim F, Bald T</p>
+          <p class="pub-title">Stressed out: NKp46 binds ecto-calreticulin</p>
+          <p class="pub-venue">Immunology and Cell Biology, 2023</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1111/imcb.12659" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors"><strong>Corvino D</strong>, Kumar A, Bald T</p>
+          <p class="pub-title">Plasticity of NK cells in Cancer</p>
+          <p class="pub-venue">Frontiers in Immunology, 2022</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.3389/fimmu.2022.888313" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Wang Y, De Labastida Rivera F, … <strong>Corvino D</strong>, et al.</p>
+          <p class="pub-title">STING activation promotes autologous type I interferon-dependent development of type 1 regulatory T cells during malaria</p>
+          <p class="pub-venue">Journal of Clinical Investigation, 2023</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1172/JCI169417" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <span class="pub-year-label">2022</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Li X-Y, <strong>Corvino D</strong>, Nowlan B, et al.</p>
+          <p class="pub-title">NKG7 Is Required for Optimal Antitumor T-cell Immunity</p>
+          <p class="pub-venue">Cancer Immunology Research, 2022</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1158/2326-6066.CIR-20-0649" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <span class="pub-year-label">2020</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Braun M, … <strong>Corvino D</strong>, … Bald T</p>
+          <p class="pub-title">CD155 on Tumor Cells Drives Resistance to Immunotherapy by Inducing the Degradation of the Activating Receptor CD226 in CD8+ T Cells</p>
+          <p class="pub-venue">Immunity, 2020</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1016/j.immuni.2020.09.010" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Ng SS, … <strong>Corvino D</strong>, … Engwerda CR</p>
+          <p class="pub-title">The NK cell granule protein NKG7 regulates cytotoxic granule exocytosis and inflammation</p>
+          <p class="pub-venue">Nature Immunology, 2020</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1038/s41590-020-0758-6" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+      <span class="pub-year-label">2019</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors">Smith C, <strong>Corvino D</strong>, Beagley L, et al.</p>
+          <p class="pub-title">T cell repertoire remodeling following post-transplant T cell therapy coincides with clinical response</p>
+          <p class="pub-venue">Journal of Clinical Investigation, 2019</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.1172/JCI128323" target="_blank" rel="noopener">DOI ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-intro">
+          Open to discussing <strong>collaborations</strong>, <strong>translational research opportunities</strong>, and <strong>industry roles</strong> in immuno-oncology, cell therapy, and computational biology — across the <strong>EU and Australia</strong>.
+        </p>
+        <div class="contact-cv-block">
+          <a href="CV_Dillon_Corvino.pdf" download class="btn-cv-contact">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+      <div class="contact-list reveal d1">
+        <div class="c-row">
+          <span class="c-label">Email</span>
+          <span class="c-value"><a href="mailto:dilloncorvino@me.com">dilloncorvino@me.com</a></span>
+        </div>
+        <div class="c-row">
+          <span class="c-label">Location</span>
+          <span class="c-value">Bonn, Germany · EU work authorisation</span>
+        </div>
+        <div class="c-row">
+          <span class="c-label">Institution</span>
+          <span class="c-value">University Hospital Bonn — Abdullah Lab</span>
+        </div>
+        <div class="c-row">
+          <span class="c-label">LinkedIn</span>
+          <span class="c-value"><a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener">linkedin.com/in/dillon-corvino-8b9320ab/</a></span>
+        </div>
+        <div class="c-row">
+          <span class="c-label">GitHub</span>
+          <span class="c-value"><a href="https://github.com/Eomesodermin" target="_blank" rel="noopener">github.com/Eomesodermin</a></span>
+        </div>
+        <div class="c-row">
+          <span class="c-label">ORCID</span>
+          <span class="c-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener">0000-0003-0683-1369</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Dillon Corvino, PhD &ensp;·&ensp; University Hospital Bonn</p>
+  <p>© 2026</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+    { threshold: 0.07 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
