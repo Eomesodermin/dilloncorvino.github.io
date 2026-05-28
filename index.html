@@ -5,8 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dillon Corvino, PhD — Immunologist</title>
   <meta name="description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology. University Hospital Bonn, Germany.">
+
+  <link rel="canonical" href="https://dilloncorvino.com/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Dillon Corvino, PhD — Immunologist">
+  <meta property="og:description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology. University Hospital Bonn, Germany.">
+  <meta property="og:url" content="https://dilloncorvino.com/">
+  <meta property="og:image" content="https://dilloncorvino.com/photo.jpg">
+  <meta property="og:image:alt" content="Dillon Corvino">
+  <meta property="profile:first_name" content="Dillon">
+  <meta property="profile:last_name" content="Corvino">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dillon Corvino, PhD — Immunologist">
+  <meta name="twitter:description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology.">
+  <meta name="twitter:image" content="https://dilloncorvino.com/photo.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; transition: none !important; }</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dillon Corvino",
+    "honorificSuffix": "PhD",
+    "url": "https://dilloncorvino.com/",
+    "image": "https://dilloncorvino.com/photo.jpg",
+    "email": "dilloncorvino@me.com",
+    "jobTitle": "Postdoctoral Researcher",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "University Hospital Bonn"
+    },
+    "knowsAbout": ["T cell biology", "NK cell biology", "single-cell multi-omics", "immuno-oncology", "CRISPR"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=1-fxfDkAAAAJ",
+      "https://orcid.org/0000-0003-0683-1369",
+      "https://www.linkedin.com/in/dillon-corvino-8b9320ab/",
+      "https://github.com/Eomesodermin"
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,7 +60,7 @@
       --surface: #ffffff;
       --text:    #141412;
       --muted:   #6b6860;
-      --subtle:  #9e9b95;
+      --subtle:  #6e6c67;
       --accent:  #1d3d7a;
       --border:  #dddbd5;
       --serif:   'Fraunces', Georgia, serif;
@@ -33,6 +78,24 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* ── SKIP LINK ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 200;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: top 0.1s;
+    }
+    .skip-link:focus { top: 1rem; }
 
     /* ── NAV ── */
     nav {
@@ -102,6 +165,77 @@
     }
 
     .nav-cv:hover { background: #162e5e; }
+
+    /* ── HAMBURGER ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      padding: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--border); }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE DRAWER ── */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: var(--nav-h) 0 0 0;
+      z-index: 99;
+      background: rgba(245,244,240,0.98);
+      backdrop-filter: blur(16px);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    .mobile-drawer.open {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+    .mobile-drawer a {
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--text);
+      text-decoration: none;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+      transition: color 0.15s;
+    }
+    .mobile-drawer a:hover { color: var(--accent); }
+    .mobile-drawer .drawer-cv {
+      margin-top: 1.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: none;
+    }
 
     /* ── HERO ── */
     #home {
@@ -247,7 +381,6 @@
       background: var(--surface);
     }
 
-    /* Photo: swap src to update; adjust object-position to reframe crop */
     .photo-frame {
       width: 185px;
       height: 185px;
@@ -681,6 +814,9 @@
     @media (max-width: 860px) {
       nav { padding: 0 1.25rem; }
       .nav-links { display: none; }
+      .nav-cv { display: none; }
+      .nav-hamburger { display: flex; }
+      .mobile-drawer { display: flex; }
 
       #home { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 4.5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
@@ -698,6 +834,8 @@
 </head>
 <body>
 
+<a href="#home" class="skip-link">Skip to main content</a>
+
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-name">Dillon Corvino</a>
@@ -707,10 +845,22 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <!-- CV download: replace href with path to your PDF file when hosted -->
-    <a href="CV_Dillon_Corvino.pdf" download class="nav-cv">Download CV</a>
+    <a href="CV_Dillon_Corvino.pdf" download class="nav-cv">Download CV (PDF)</a>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Navigation menu">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#contact">Contact</a>
+  <a href="CV_Dillon_Corvino.pdf" download class="drawer-cv">Download CV (PDF)</a>
+</div>
 
 <!-- HERO -->
 <section id="home">
@@ -719,22 +869,24 @@
     <h1 class="hero-name reveal d1">Dillon Corvino<em>, PhD</em></h1>
     <p class="hero-sub reveal d2">T cell &amp; NK cell biology &ensp;·&ensp; Immuno-oncology &ensp;·&ensp; Single-cell multi-omics</p>
     <p class="hero-bio reveal d3">
-      Immunologist with 6+ years of postdoctoral experience across tumour immunology, viral immunity, and translational immuno-oncology. I combine wet-lab expertise in human primary tissue and genetic engineering with independent end-to-end single-cell and spatial multi-omics analysis — understanding cytotoxic lymphocyte biology and advancing cell therapy strategies from discovery through publication.
+      Immunologist with 6+ years of postdoctoral experience across tumour immunology, viral immunity, and translational immuno-oncology. I combine wet-lab expertise in human primary tissue and genetic engineering with independent end-to-end single-cell and spatial multi-omics analysis.
+    </p>
+    <p class="hero-bio reveal d3">
+      My focus is understanding cytotoxic lymphocyte biology and advancing cell therapy strategies from discovery through publication.
     </p>
     <p class="hero-open reveal d3">Open to industry roles in immuno-oncology and cell therapy across the EU and Australia</p>
     <div class="hero-actions reveal d3">
       <a href="CV_Dillon_Corvino.pdf" download class="btn-primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download CV
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV (PDF)
       </a>
-      <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank" rel="noopener" class="btn-ghost">Scholar</a>
-      <a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
-      <a href="https://github.com/Eomesodermin" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-ghost">Scholar</a>
+      <a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn</a>
+      <a href="https://github.com/Eomesodermin" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub</a>
     </div>
   </div>
 
   <div class="hero-right">
-    <!-- Photo: to update, replace base64 data below. Adjust object-position to reframe crop. -->
     <div class="photo-frame reveal">
       <img src="photo.jpg" alt="Dillon Corvino" />
     </div>
@@ -769,7 +921,7 @@
       </div>
       <div class="meta-row">
         <span class="meta-label">ORCID</span>
-        <span class="meta-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank">0000-0003-0683-1369</a></span>
+        <span class="meta-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener noreferrer">0000-0003-0683-1369</a></span>
       </div>
     </div>
   </div>
@@ -785,7 +937,7 @@
 
     <div class="research-grid">
       <div class="r-card reveal">
-        <div class="r-card-icon">
+        <div class="r-card-icon" aria-hidden="true">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
           </svg>
@@ -794,7 +946,7 @@
         <p>NK cell plasticity and dysfunction in the tumour microenvironment. CD8 T cell state transitions, type I IFN-driven dysfunction, and unconventional T cell subsets in anti-viral and anti-tumour immunity.</p>
       </div>
       <div class="r-card reveal d1">
-        <div class="r-card-icon">
+        <div class="r-card-icon" aria-hidden="true">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 8h2v3h-2zM15 8h2v7h-2z"/>
           </svg>
@@ -803,7 +955,7 @@
         <p>Independent end-to-end pipelines across scRNA-seq, CITE-seq, scATAC-seq, and scTCR-seq on HPC. Spatial transcriptomics and high-multiplex imaging for tissue-resolved characterisation of immune niches.</p>
       </div>
       <div class="r-card reveal d2">
-        <div class="r-card-icon">
+        <div class="r-card-icon" aria-hidden="true">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 9H17v1.5c0 .83-.67 1.5-1.5 1.5S14 11.33 14 10.5 14.67 9 15.5 9z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 15H7v-1.5c0-.83.67-1.5 1.5-1.5S10 12.67 10 13.5 9.33 15 8.5 15z"/>
           </svg>
@@ -812,7 +964,7 @@
         <p>CRISPR knock-out, knock-in, and overexpression in primary human NK and CD8 T cells. CAR-NK and CAR-T cell engineering with proof-of-concept data in preclinical models.</p>
       </div>
       <div class="r-card reveal d3">
-        <div class="r-card-icon">
+        <div class="r-card-icon" aria-hidden="true">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
           </svg>
@@ -880,8 +1032,8 @@
     </div>
 
     <p class="pub-meta reveal">
-      Full list on <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank">Google Scholar</a> &ensp;·&ensp;
-      ORCID <a href="https://orcid.org/0000-0003-0683-1369" target="_blank">0000-0003-0683-1369</a> &ensp;·&ensp;
+      Full list on <a href="https://scholar.google.com/citations?user=1-fxfDkAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> &ensp;·&ensp;
+      ORCID <a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener noreferrer">0000-0003-0683-1369</a> &ensp;·&ensp;
       970 citations &ensp;·&ensp; h-index 15
     </p>
 
@@ -895,7 +1047,7 @@
           <p class="pub-title">Type I Interferon Drives a Cellular State Inert to TCR-Stimulation and Could Impede Effective T-Cell Differentiation in Cancer</p>
           <p class="pub-venue">European Journal of Immunology, 2025</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1002/eji.202451371" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1002/eji.202451371" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <div class="pub-row">
@@ -904,7 +1056,7 @@
           <p class="pub-title">NKG7 is a stable marker of cytotoxicity across immune contexts and within the tumor microenvironment</p>
           <p class="pub-venue">European Journal of Immunology, 2025</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1002/eji.202551885" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1002/eji.202551885" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <span class="pub-year-label">2024</span>
@@ -915,7 +1067,7 @@
           <p class="pub-title">L-RNA aptamer-based CXCL12 inhibition combined with radiotherapy in newly-diagnosed glioblastoma: dose escalation of the phase I/II GLORIA trial</p>
           <p class="pub-venue">Nature Communications, 2024</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1038/s41467-024-48416-9" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1038/s41467-024-48416-9" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <div class="pub-row">
@@ -924,7 +1076,7 @@
           <p class="pub-title">Adipocyte Precursor-Derived NRG1 Promotes Resistance to FGFR Inhibition in Urothelial Carcinoma</p>
           <p class="pub-venue">Cancer Research, 2024</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1158/0008-5472.CAN-23-1398" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1158/0008-5472.CAN-23-1398" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <div class="pub-row">
@@ -933,7 +1085,7 @@
           <p class="pub-title">Regulatory T cells hamper the efficacy of T-cell-engaging bispecific antibody therapy</p>
           <p class="pub-venue">Haematologica, 2024</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.3324/haematol.2023.283758" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.3324/haematol.2023.283758" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <span class="pub-year-label">2023</span>
@@ -944,16 +1096,7 @@
           <p class="pub-title">Stressed out: NKp46 binds ecto-calreticulin</p>
           <p class="pub-venue">Immunology and Cell Biology, 2023</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1111/imcb.12659" target="_blank" rel="noopener">DOI ↗</a>
-      </div>
-
-      <div class="pub-row">
-        <div>
-          <p class="pub-authors"><strong>Corvino D</strong>, Kumar A, Bald T</p>
-          <p class="pub-title">Plasticity of NK cells in Cancer</p>
-          <p class="pub-venue">Frontiers in Immunology, 2022</p>
-        </div>
-        <a class="pub-doi" href="https://doi.org/10.3389/fimmu.2022.888313" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1111/imcb.12659" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <div class="pub-row">
@@ -962,10 +1105,19 @@
           <p class="pub-title">STING activation promotes autologous type I interferon-dependent development of type 1 regulatory T cells during malaria</p>
           <p class="pub-venue">Journal of Clinical Investigation, 2023</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1172/JCI169417" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1172/JCI169417" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <span class="pub-year-label">2022</span>
+
+      <div class="pub-row">
+        <div>
+          <p class="pub-authors"><strong>Corvino D</strong>, Kumar A, Bald T</p>
+          <p class="pub-title">Plasticity of NK cells in Cancer</p>
+          <p class="pub-venue">Frontiers in Immunology, 2022</p>
+        </div>
+        <a class="pub-doi" href="https://doi.org/10.3389/fimmu.2022.888313" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
 
       <div class="pub-row">
         <div>
@@ -973,7 +1125,7 @@
           <p class="pub-title">NKG7 Is Required for Optimal Antitumor T-cell Immunity</p>
           <p class="pub-venue">Cancer Immunology Research, 2022</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1158/2326-6066.CIR-20-0649" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1158/2326-6066.CIR-20-0649" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <span class="pub-year-label">2020</span>
@@ -984,7 +1136,7 @@
           <p class="pub-title">CD155 on Tumor Cells Drives Resistance to Immunotherapy by Inducing the Degradation of the Activating Receptor CD226 in CD8+ T Cells</p>
           <p class="pub-venue">Immunity, 2020</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1016/j.immuni.2020.09.010" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1016/j.immuni.2020.09.010" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <div class="pub-row">
@@ -993,7 +1145,7 @@
           <p class="pub-title">The NK cell granule protein NKG7 regulates cytotoxic granule exocytosis and inflammation</p>
           <p class="pub-venue">Nature Immunology, 2020</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1038/s41590-020-0758-6" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1038/s41590-020-0758-6" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
       <span class="pub-year-label">2019</span>
@@ -1004,7 +1156,7 @@
           <p class="pub-title">T cell repertoire remodeling following post-transplant T cell therapy coincides with clinical response</p>
           <p class="pub-venue">Journal of Clinical Investigation, 2019</p>
         </div>
-        <a class="pub-doi" href="https://doi.org/10.1172/JCI128323" target="_blank" rel="noopener">DOI ↗</a>
+        <a class="pub-doi" href="https://doi.org/10.1172/JCI128323" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
     </div>
@@ -1025,8 +1177,8 @@
         </p>
         <div class="contact-cv-block">
           <a href="CV_Dillon_Corvino.pdf" download class="btn-cv-contact">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV (PDF)
           </a>
         </div>
       </div>
@@ -1045,15 +1197,15 @@
         </div>
         <div class="c-row">
           <span class="c-label">LinkedIn</span>
-          <span class="c-value"><a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener">linkedin.com/in/dillon-corvino-8b9320ab/</a></span>
+          <span class="c-value"><a href="https://www.linkedin.com/in/dillon-corvino-8b9320ab/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dillon-corvino-8b9320ab/</a></span>
         </div>
         <div class="c-row">
           <span class="c-label">GitHub</span>
-          <span class="c-value"><a href="https://github.com/Eomesodermin" target="_blank" rel="noopener">github.com/Eomesodermin</a></span>
+          <span class="c-value"><a href="https://github.com/Eomesodermin" target="_blank" rel="noopener noreferrer">github.com/Eomesodermin</a></span>
         </div>
         <div class="c-row">
           <span class="c-label">ORCID</span>
-          <span class="c-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener">0000-0003-0683-1369</a></span>
+          <span class="c-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener noreferrer">0000-0003-0683-1369</a></span>
         </div>
       </div>
     </div>
@@ -1071,6 +1223,23 @@
     { threshold: 0.07 }
   );
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('mobile-drawer');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
 </script>
 
 </body>
