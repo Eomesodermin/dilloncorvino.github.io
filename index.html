@@ -14,6 +14,8 @@
   <meta property="og:description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology. University Hospital Bonn, Germany.">
   <meta property="og:url" content="https://dilloncorvino.com/">
   <meta property="og:image" content="https://dilloncorvino.com/photo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
   <meta property="og:image:alt" content="Dillon Corvino">
   <meta property="profile:first_name" content="Dillon">
   <meta property="profile:last_name" content="Corvino">
@@ -23,8 +25,177 @@
   <meta name="twitter:description" content="Postdoctoral immunologist specialising in T cell and NK cell biology, single-cell multi-omics, and translational immuno-oncology.">
   <meta name="twitter:image" content="https://dilloncorvino.com/photo.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Self-hosted fonts (no external dependency; GitHub Pages friendly) -->
+  <style id="fonts">
+  /* vietnamese */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-0.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-1.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-2.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-0.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-1.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-2.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-3.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-4.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(fonts/fraunces-5.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-3.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-4.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/fraunces-5.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-6.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-7.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-6.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-7.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-6.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/instrumentsans-7.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  </style>
 
   <noscript><style>.reveal { opacity: 1 !important; transform: none !important; transition: none !important; }</style></noscript>
 
@@ -63,6 +234,9 @@
       --subtle:  #6e6c67;
       --accent:  #1d3d7a;
       --border:  #dddbd5;
+      --wl:      #1d3d7a;
+      --cp:      #1f7a8c;
+      --ld:      #6f5a99;
       --serif:   'Fraunces', Georgia, serif;
       --sans:    'Instrument Sans', system-ui, sans-serif;
       --nav-h:   64px;
@@ -147,6 +321,7 @@
     }
 
     .nav-links a:hover { color: var(--text); background: var(--border); }
+    .nav-links a.active { color: var(--accent); }
 
     .nav-cv {
       font-family: var(--sans);
@@ -239,18 +414,30 @@
 
     /* ── HERO ── */
     #home {
+      position: relative;
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       min-height: 100vh;
       padding-top: var(--nav-h);
     }
 
+    /* ambient immune-cell field — sits behind the hero text column */
+    #cell-field {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
     .hero-left {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 5rem 4rem 5rem 3.5rem;
-      border-right: 1px solid var(--border);
     }
 
     .hero-eyebrow {
@@ -372,13 +559,14 @@
 
     /* ── HERO RIGHT ── */
     .hero-right {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 2rem;
       padding: 5rem 3.5rem;
-      background: var(--surface);
     }
 
     .photo-frame {
@@ -386,9 +574,11 @@
       height: 185px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--border);
-      box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+      border: 3px solid var(--surface);
+      box-shadow: 0 8px 34px rgba(20,20,18,0.16);
       flex-shrink: 0;
+      transition: box-shadow 0.3s;
+      will-change: transform;
     }
 
     .photo-frame img {
@@ -408,6 +598,7 @@
       overflow: hidden;
       width: 100%;
       max-width: 280px;
+      box-shadow: 0 6px 28px rgba(20,20,18,0.10);
     }
 
     .stat {
@@ -518,6 +709,10 @@
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       transition: box-shadow 0.2s, transform 0.2s;
     }
 
@@ -539,10 +734,33 @@
       margin-bottom: 0.6rem;
     }
 
-    .r-card p {
-      font-size: 0.88rem;
+    .r-card-lead {
+      font-size: 0.9rem;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.6;
+      margin-bottom: 1.1rem;
+    }
+
+    /* chip clouds — shared by research cards & core-expertise */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: auto;
+      justify-content: center;
+    }
+
+    .chip {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(29,61,122,0.06);
+      border: 1px solid rgba(29,61,122,0.12);
+      padding: 0.3rem 0.7rem;
+      border-radius: 100px;
+      line-height: 1.3;
+      white-space: nowrap;
     }
 
     /* ── SKILLS ── */
@@ -563,53 +781,73 @@
     }
 
     .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.25rem;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 2.5rem;
     }
 
-    .skill-col {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.5rem;
-    }
-
-    .skill-col-title {
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      padding-bottom: 0.6rem;
+    .skill-tier {
+      padding: 1.5rem 0;
       border-bottom: 1px solid var(--border);
     }
+    .skill-tier:first-child { padding-top: 0.5rem; }
+    .skill-tier:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .skill-list {
-      list-style: none;
+    .skill-cat {
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.95rem;
+    }
+
+    .skill-sig {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .skill-sub {
+      display: flex;
+      flex-wrap: wrap;
       gap: 0.45rem;
     }
 
-    .skill-list li {
-      font-size: 0.84rem;
-      color: var(--muted);
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-      line-height: 1.4;
+    .s-pill {
+      font-family: var(--sans);
+      border-radius: 100px;
+      line-height: 1.3;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .s-pill.sig {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 0.44rem 0.95rem;
+    }
+    .s-pill.sub {
+      font-size: 0.74rem;
+      font-weight: 500;
+      padding: 0.34rem 0.72rem;
+      border: 1px solid;
     }
 
-    .skill-list li::before {
-      content: '·';
-      color: var(--accent);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
+    /* per-section colour coding */
+    .tier-wl .skill-cat { color: var(--wl); }
+    .tier-wl .s-pill.sig { background: var(--wl); }
+    .tier-wl .s-pill.sub { color: var(--wl); background: rgba(29,61,122,0.06); border-color: rgba(29,61,122,0.16); }
+    .tier-cp .skill-cat { color: var(--cp); }
+    .tier-cp .s-pill.sig { background: var(--cp); }
+    .tier-cp .s-pill.sub { color: var(--cp); background: rgba(31,122,140,0.07); border-color: rgba(31,122,140,0.18); }
+    .tier-ld .skill-cat { color: var(--ld); }
+    .tier-ld .s-pill.sig { background: var(--ld); }
+    .tier-ld .s-pill.sub { color: var(--ld); background: rgba(111,90,153,0.07); border-color: rgba(111,90,153,0.18); }
+
+    .s-pill.sig:hover { transform: translateY(-1px); box-shadow: 0 3px 12px rgba(20,20,18,0.14); }
+    .s-pill.sub:hover { transform: translateY(-1px); }
 
     .tags {
       display: flex;
@@ -796,19 +1034,98 @@
     footer p { font-size: 0.72rem; color: rgba(255,255,255,0.2); letter-spacing: 0.04em; }
 
     /* ── REVEAL ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Default = visible. The entrance animation only plays when JS adds .in,
+       so no-JS, capture tools, and throttled previews all degrade to "just shown". */
+    @keyframes revealIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
     }
-
-    .reveal.in { opacity: 1; transform: none; }
-    .d1 { transition-delay: 0.08s; }
-    .d2 { transition-delay: 0.16s; }
-    .d3 { transition-delay: 0.24s; }
+    .reveal.in { animation: revealIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+    .d1.in { animation-delay: 0.08s; }
+    .d2.in { animation-delay: 0.16s; }
+    .d3.in { animation-delay: 0.24s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal.in { animation: none; }
+    }
 
     /* ── SVG ICONS ── */
     .icon { display: block; width: 100%; height: 100%; }
+
+    /* ── ANCHOR OFFSET (clear the fixed nav on jump-links) ── */
+    section[id] { scroll-margin-top: var(--nav-h); }
+
+    /* ── FOCUS VISIBLE (keyboard users) ── */
+    a:focus-visible,
+    button:focus-visible,
+    .btn-primary:focus-visible,
+    .btn-ghost:focus-visible,
+    .nav-cv:focus-visible,
+    .nav-links a:focus-visible,
+    .pub-doi:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── PUBLICATION HIGHLIGHT ── */
+    .pub-row.featured {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.1rem 1.25rem;
+      margin: 0.5rem 0;
+      box-shadow: 0 4px 20px rgba(20,20,18,0.05);
+    }
+    .pub-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .pub-badge {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(29,61,122,0.08);
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pub-badge.role { color: #fff; background: var(--accent); }
+
+    /* ── COPY EMAIL BUTTON ── */
+    .copy-email {
+      font-family: var(--sans);
+      font-size: inherit;
+      color: var(--accent);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+    .copy-email:hover { text-decoration: underline; }
+    .copy-email svg { width: 13px; height: 13px; opacity: 0.65; flex-shrink: 0; }
+    .copy-feedback {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #22a05a;
+      margin-left: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .copy-feedback.show { opacity: 1; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
@@ -819,8 +1136,8 @@
       .mobile-drawer { display: flex; }
 
       #home { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 4.5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-right { padding: 3rem 1.5rem 4rem; }
+      .hero-left { padding: 4.5rem 1.5rem 2rem; }
+      .hero-right { padding: 1rem 1.5rem 4rem; }
       .photo-frame { width: 150px; height: 150px; }
       .stats-grid, .hero-meta { max-width: 100%; }
 
@@ -829,6 +1146,26 @@
       .skills-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; text-align: center; }
+    }
+
+    /* ── PRINT (clean one-pager) ── */
+    @media print {
+      :root { --nav-h: 0px; }
+      nav, .nav-hamburger, .mobile-drawer, #cell-field, .hero-actions,
+      .skip-link, .copy-feedback { display: none !important; }
+      body { background: #fff; color: #000; font-size: 11pt; }
+      .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+      #home { display: block; min-height: auto; padding-top: 0; }
+      .hero-left { padding: 0 0 1rem; }
+      .hero-right { flex-direction: row; gap: 1.5rem; padding: 0 0 1rem; justify-content: flex-start; }
+      .photo-frame { width: 90px; height: 90px; box-shadow: none; transform: none !important; }
+      .stats-grid { box-shadow: none; max-width: 360px; }
+      section { page-break-inside: avoid; }
+      .pub-row, .r-card, .skill-tier { page-break-inside: avoid; }
+      a { color: #000; text-decoration: none; }
+      .pub-row.featured { box-shadow: none; border-left: 3px solid #000; }
+      h1.hero-name { font-size: 28pt; }
+      footer { border-top: 1px solid #ccc; }
     }
   </style>
 </head>
@@ -864,6 +1201,7 @@
 
 <!-- HERO -->
 <section id="home">
+  <canvas id="cell-field" aria-hidden="true"></canvas>
   <div class="hero-left">
     <span class="hero-eyebrow reveal">Postdoctoral Researcher · University Hospital Bonn</span>
     <h1 class="hero-name reveal d1">Dillon Corvino<em>, PhD</em></h1>
@@ -909,21 +1247,6 @@
         <div class="stat-l">Funding (PI)</div>
       </div>
     </div>
-
-    <div class="hero-meta reveal d2">
-      <div class="meta-row">
-        <span class="meta-label">Location</span>
-        <span class="meta-value">Bonn, Germany · EU work authorisation</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Institution</span>
-        <span class="meta-value">Abdullah Lab, University Hospital Bonn</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">ORCID</span>
-        <span class="meta-value"><a href="https://orcid.org/0000-0003-0683-1369" target="_blank" rel="noopener noreferrer">0000-0003-0683-1369</a></span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -943,7 +1266,13 @@
           </svg>
         </div>
         <h3>Cytotoxic lymphocyte biology</h3>
-        <p>NK cell plasticity and dysfunction in the tumour microenvironment. CD8 T cell state transitions, type I IFN-driven dysfunction, and unconventional T cell subsets in anti-viral and anti-tumour immunity.</p>
+        <p class="r-card-lead">NK cell plasticity and dysfunction in the tumour microenvironment.</p>
+        <div class="chip-row">
+          <span class="chip">CD8 T cell states</span>
+          <span class="chip">Type I IFN dysfunction</span>
+          <span class="chip">Unconventional T cells</span>
+          <span class="chip">Anti-tumour &amp; anti-viral</span>
+        </div>
       </div>
       <div class="r-card reveal d1">
         <div class="r-card-icon" aria-hidden="true">
@@ -952,7 +1281,15 @@
           </svg>
         </div>
         <h3>Single-cell &amp; spatial multi-omics</h3>
-        <p>Independent end-to-end pipelines across scRNA-seq, CITE-seq, scATAC-seq, and scTCR-seq on HPC. Spatial transcriptomics and high-multiplex imaging for tissue-resolved characterisation of immune niches.</p>
+        <p class="r-card-lead">Independent end-to-end analysis pipelines, run on HPC.</p>
+        <div class="chip-row">
+          <span class="chip">scRNA-seq</span>
+          <span class="chip">CITE-seq</span>
+          <span class="chip">scATAC-seq</span>
+          <span class="chip">scTCR-seq</span>
+          <span class="chip">Spatial transcriptomics</span>
+          <span class="chip">High-multiplex imaging</span>
+        </div>
       </div>
       <div class="r-card reveal d2">
         <div class="r-card-icon" aria-hidden="true">
@@ -961,7 +1298,14 @@
           </svg>
         </div>
         <h3>Cell engineering &amp; therapy</h3>
-        <p>CRISPR knock-out, knock-in, and overexpression in primary human NK and CD8 T cells. CAR-NK and CAR-T cell engineering with proof-of-concept data in preclinical models.</p>
+        <p class="r-card-lead">Genetic engineering of primary human lymphocytes.</p>
+        <div class="chip-row">
+          <span class="chip">CRISPR KO / KI / OE</span>
+          <span class="chip">Primary NK &amp; CD8 T cells</span>
+          <span class="chip">CAR-NK</span>
+          <span class="chip">CAR-T</span>
+          <span class="chip">Preclinical models</span>
+        </div>
       </div>
       <div class="r-card reveal d3">
         <div class="r-card-icon" aria-hidden="true">
@@ -970,7 +1314,13 @@
           </svg>
         </div>
         <h3>Translational immunology</h3>
-        <p>Reverse translational approaches linking clinical immune phenotypes to mechanistic discovery. Biomarker development from patient tissue through computational analysis to peer-reviewed publication.</p>
+        <p class="r-card-lead">Reverse-translational discovery — bench to publication.</p>
+        <div class="chip-row">
+          <span class="chip">Clinical immune phenotyping</span>
+          <span class="chip">Biomarker development</span>
+          <span class="chip">Patient tissue</span>
+          <span class="chip">Computational analysis</span>
+        </div>
       </div>
     </div>
 
@@ -978,46 +1328,68 @@
     <div class="skills-section reveal">
       <p class="skills-header">Core expertise</p>
       <div class="skills-grid">
-        <div class="skill-col">
-          <div class="skill-col-title">Wet Lab</div>
-          <ul class="skill-list">
-            <li>Spectral &amp; conventional flow cytometry (40+ colour panels)</li>
-            <li>FACS sorting &amp; tetramer staining</li>
-            <li>CRISPR KO, KI &amp; overexpression in primary NK / CD8 T cells</li>
-            <li>Lentiviral &amp; adenoviral delivery systems</li>
-            <li>Primary human tissue processing (tumour, PBMC, healthy tissue)</li>
-            <li>Air-liquid interface organoids &amp; tissue fragment cultures</li>
-            <li>Murine syngeneic &amp; humanised tumour models</li>
-            <li>LCMV acute &amp; chronic infection models</li>
-            <li>Functional assays: cytotoxicity, ICS, degranulation, proliferation</li>
-          </ul>
+
+        <div class="skill-tier tier-wl">
+          <span class="skill-cat">Wet Lab</span>
+          <div class="skill-sig">
+            <span class="s-pill sig">Spectral/Conventional flow cytometry · 40+ colours</span>
+            <span class="s-pill sig">CRISPR/Cas9 · primary immune cells</span>
+            <span class="s-pill sig">Primary human tissue &amp; ex vivo models</span>
+            <span class="s-pill sig">Preclinical murine models</span>
+          </div>
+          <div class="skill-sub">
+            <span class="s-pill sub">CAR-NK &amp; CAR-T engineering</span>
+            <span class="s-pill sub">FACS sorting &amp; high-dim panel design</span>
+            <span class="s-pill sub">Lentiviral / adenoviral overexpression</span>
+            <span class="s-pill sub">Murine tumour models</span>
+            <span class="s-pill sub">LCMV acute &amp; chronic infection</span>
+            <span class="s-pill sub">Organoids · ALI · tissue-fragment cultures</span>
+            <span class="s-pill sub">CAM (in ovo) assays</span>
+            <span class="s-pill sub">Functional assays — cytotoxicity, ICS, degranulation</span>
+          </div>
         </div>
-        <div class="skill-col">
-          <div class="skill-col-title">Computational</div>
-          <ul class="skill-list">
-            <li>R / tidyverse (primary language)</li>
-            <li>scRNA-seq · CITE-seq · scATAC-seq · scTCR-seq</li>
-            <li>Seurat · Monocle · ArchR</li>
-            <li>Trajectory inference &amp; chromatin state modelling</li>
-            <li>Spatial transcriptomics &amp; high-multiplex imaging analysis</li>
-            <li>Bulk RNA-seq &amp; DNA-seq</li>
-            <li>HPC pipelines with Nextflow &amp; Singularity</li>
-            <li>GitHub version control &amp; reproducible workflows</li>
-            <li>Scientific visualisation (ggplot2, Adobe Illustrator)</li>
-          </ul>
+
+        <div class="skill-tier tier-cp">
+          <span class="skill-cat">Computational</span>
+          <div class="skill-sig">
+            <span class="s-pill sig">scRNA-seq · CITE-seq · scATAC-seq · scTCR-seq</span>
+            <span class="s-pill sig">R / tidyverse</span>
+            <span class="s-pill sig">HPC execution</span>
+          </div>
+          <div class="skill-sub">
+            <span class="s-pill sub">Spatial transcriptomics &amp; imaging</span>
+            <span class="s-pill sub">Bulk RNA · TCR · DNA-seq &amp; WES</span>
+            <span class="s-pill sub">Next-Gen sequence alignment</span>
+            <span class="s-pill sub">Whole-genome CRISPR screen</span>
+            <span class="s-pill sub">Pseudotime &amp; trajectory inference</span>
+            <span class="s-pill sub">Nextflow · Snakemake · SLURM</span>
+            <span class="s-pill sub">Conda / Mamba</span>
+            <span class="s-pill sub">Integration &amp; batch correction</span>
+            <span class="s-pill sub">GRN &amp; cell–cell communication</span>
+            <span class="s-pill sub">TCR repertoire analysis</span>
+            <span class="s-pill sub">Applied ML &amp; TCR embedding</span>
+            <span class="s-pill sub">Scientific viz · Illustrator</span>
+          </div>
         </div>
-        <div class="skill-col">
-          <div class="skill-col-title">Leadership</div>
-          <ul class="skill-list">
-            <li>Independent research programme ownership</li>
-            <li>Full hiring cycle: 3 PhDs &amp; 2 research technicians</li>
-            <li>Scientific mentorship of 10+ PhD, MSc &amp; BSc students</li>
-            <li>PI on €100k BMBF GO-Bio Initial grant</li>
-            <li>International collaboration across 4 continents</li>
-            <li>Manuscript lead &amp; co-author on 20+ publications</li>
-            <li>Peer reviewer: Nature Comms, Immunity, Cancer Immunol Res</li>
-          </ul>
+
+        <div class="skill-tier tier-ld">
+          <span class="skill-cat">Leadership</span>
+          <div class="skill-sig">
+            <span class="s-pill sig">PI — €100k BMBF GO-Bio grant</span>
+            <span class="s-pill sig">Independent programme ownership</span>
+            <span class="s-pill sig">Hiring lead · 3 PhDs &amp; 2 technicians</span>
+          </div>
+          <div class="skill-sub">
+            <span class="s-pill sub">Established 3 institute-wide platforms (flow, multi-omics, organoids)</span>
+            <span class="s-pill sub">Mentorship of 10+ PhD / MSc / BSc students</span>
+            <span class="s-pill sub">International collaboration across 4 continents</span>
+            <span class="s-pill sub">20+ publications</span>
+            <span class="s-pill sub">Peer reviewer · Nat Comms, Immunity, Cancer Immunol Res</span>
+            <span class="s-pill sub">Scientific consultant · Axelia Oncology</span>
+            <span class="s-pill sub">Inventor · provisional patent (immunocompetence biomarkers)</span>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -1041,8 +1413,12 @@
 
       <span class="pub-year-label">2025</span>
 
-      <div class="pub-row">
+      <div class="pub-row featured">
         <div>
+          <div class="pub-badges">
+            <span class="pub-badge role">First author</span>
+            <span class="pub-badge">Selected</span>
+          </div>
           <p class="pub-authors"><strong>Corvino D</strong>, Batstone M, Hughes BGM, Kempchen T, Ng SS, Salim N, et al.</p>
           <p class="pub-title">Type I Interferon Drives a Cellular State Inert to TCR-Stimulation and Could Impede Effective T-Cell Differentiation in Cancer</p>
           <p class="pub-venue">European Journal of Immunology, 2025</p>
@@ -1050,8 +1426,12 @@
         <a class="pub-doi" href="https://doi.org/10.1002/eji.202451371" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </div>
 
-      <div class="pub-row">
+      <div class="pub-row featured">
         <div>
+          <div class="pub-badges">
+            <span class="pub-badge role">Senior author</span>
+            <span class="pub-badge">Selected</span>
+          </div>
           <p class="pub-authors">Turiello R, Ng SS, Tan E, … <strong>Corvino D</strong></p>
           <p class="pub-title">NKG7 is a stable marker of cytotoxicity across immune contexts and within the tumor microenvironment</p>
           <p class="pub-venue">European Journal of Immunology, 2025</p>
@@ -1185,7 +1565,14 @@
       <div class="contact-list reveal d1">
         <div class="c-row">
           <span class="c-label">Email</span>
-          <span class="c-value"><a href="mailto:dilloncorvino@me.com">dilloncorvino@me.com</a></span>
+          <span class="c-value">
+            <a href="mailto:dilloncorvino@me.com">dilloncorvino@me.com</a>
+            <button type="button" class="copy-email" id="copy-email" aria-label="Copy email address">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+            <span class="copy-feedback" id="copy-feedback" role="status" aria-live="polite">Copied</span>
+          </span>
         </div>
         <div class="c-row">
           <span class="c-label">Location</span>
@@ -1214,7 +1601,7 @@
 
 <footer>
   <p>Dillon Corvino, PhD &ensp;·&ensp; University Hospital Bonn</p>
-  <p>© 2026</p>
+  <p>© 2026 &ensp;·&ensp; Last updated <time id="last-updated" datetime="2026-06">June 2026</time></p>
 </footer>
 
 <script>
@@ -1223,6 +1610,15 @@
     { threshold: 0.07 }
   );
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // fallback: reveal anything already in view on load, even if the observer is slow to fire
+  function revealInView() {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.93) el.classList.add('in');
+    });
+  }
+  window.addEventListener('load', revealInView);
+  revealInView();
 
   const hamburger = document.querySelector('.nav-hamburger');
   const drawer = document.getElementById('mobile-drawer');
@@ -1240,6 +1636,244 @@
       document.body.style.overflow = '';
     });
   });
+
+  /* ── ACTIVE NAV HIGHLIGHT ── */
+  (function () {
+    const links = [...document.querySelectorAll('.nav-links a')];
+    const map = links.map(a => ({ a, sec: document.querySelector(a.getAttribute('href')) })).filter(x => x.sec);
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          map.forEach(m => m.a.classList.toggle('active', m.sec === e.target));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    map.forEach(m => navIO.observe(m.sec));
+  })();
+
+  /* ── STAT COUNT-UP ── */
+  (function () {
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    function run(el) {
+      const raw = el.textContent.trim();
+      const m = raw.match(/^(\D*)(\d[\d,]*)(.*)$/);
+      if (!m) return;
+      const pre = m[1], target = parseInt(m[2].replace(/,/g, ''), 10), suf = m[3];
+      const grouped = m[2].includes(',');
+      const dur = 2600, t0 = performance.now();
+      function tick(now) {
+        const p = Math.min(1, (now - t0) / dur);
+        const v = Math.round(target * ease(p));
+        el.textContent = pre + (grouped ? v.toLocaleString() : v) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const grid = document.querySelector('.stats-grid');
+    if (!grid) return;
+    const statIO = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          grid.querySelectorAll('.stat-n').forEach(run);
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    statIO.observe(grid);
+  })();
+
+  /* ── COPY EMAIL ── */
+  (function () {
+    const btn = document.getElementById('copy-email');
+    const fb = document.getElementById('copy-feedback');
+    if (!btn) return;
+    let timer;
+    btn.addEventListener('click', async () => {
+      const email = 'dilloncorvino@me.com';
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = email; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        document.body.removeChild(ta);
+      }
+      if (fb) {
+        fb.classList.add('show');
+        clearTimeout(timer);
+        timer = setTimeout(() => fb.classList.remove('show'), 2000);
+      }
+    });
+  })();
+
+  /* ── AMBIENT IMMUNE-CELL FIELD ── */
+  (function () {
+    const canvas = document.getElementById('cell-field');
+    if (!canvas) return;
+    const host = document.getElementById('home');
+    const photo = document.querySelector('.photo-frame');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ctx = canvas.getContext('2d');
+    const TAU = 6.2832;
+    let w = 0, h = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
+    const mouse = { x: -9999, y: -9999 };
+    let cells = [];
+    const photoOff = { x: 0, y: 0 };
+
+    const sizes = [
+      { rMin: 9, rMax: 14 }, { rMin: 13, rMax: 20 }, { rMin: 20, rMax: 29 },
+    ];
+    const palette = ['29,61,122', '45,88,168', '74,84,162', '96,118,200', '32,108,142', '40,134,160', '88,104,150'];
+    const pickSize = () => { const r = Math.random(); return r < 0.4 ? sizes[0] : r < 0.74 ? sizes[1] : sizes[2]; };
+
+    function makeCell(x, y, r, col) {
+      return {
+        x, y,
+        vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16,
+        r, col, tr: r,
+        nx: (Math.random() - 0.5) * r * 0.18, ny: (Math.random() - 0.5) * r * 0.18,
+        ph: Math.random() * TAU,
+        state: 'idle', divT: 0, divAng: 0, born: 0,
+      };
+    }
+
+    function initCells() {
+      const n = Math.min(56, Math.round(w * h / 17500 * 1.1));
+      cells = [];
+      for (let i = 0; i < n; i++) {
+        const tp = pickSize(), col = palette[(Math.random() * palette.length) | 0];
+        const r = tp.rMin + Math.random() * (tp.rMax - tp.rMin);
+        const c = makeCell(Math.random() * w, Math.random() * h, r, col);
+        c.born = 1;
+        cells.push(c);
+      }
+      cells.sort((a, b) => b.r - a.r);
+    }
+
+    function resize() {
+      const rect = host.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      initCells();
+    }
+
+    function paintBody(c, cx, cy, br, alpha, mul) {
+      const A = alpha * (mul == null ? 1 : mul);
+      const g = ctx.createRadialGradient(cx - br * 0.3, cy - br * 0.3, 1, cx, cy, br);
+      g.addColorStop(0, `rgba(${c.col},${0.36 * A})`);
+      g.addColorStop(0.5, `rgba(${c.col},${0.30 * A})`);
+      g.addColorStop(0.85, `rgba(${c.col},${0.17 * A})`);
+      g.addColorStop(1, `rgba(${c.col},0)`);
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, br, 0, TAU); ctx.fill();
+      ctx.fillStyle = `rgba(${c.col},${0.30 * A})`;
+      ctx.beginPath(); ctx.arc(cx + c.nx, cy + c.ny, br * 0.66, 0, TAU); ctx.fill();
+    }
+
+    function step(t) {
+      ctx.clearRect(0, 0, w, h);
+      // collision separation
+      for (let i = 0; i < cells.length; i++) {
+        const a = cells[i];
+        for (let j = i + 1; j < cells.length; j++) {
+          const b = cells[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy) || 0.001, minD = a.r + b.r + 5;
+          if (d < minD) { const ux = dx / d, uy = dy / d, f = 0.04 * (1 - d / minD); a.vx += ux * f; a.vy += uy * f; b.vx -= ux * f; b.vy -= uy * f; }
+        }
+      }
+      // trigger mitosis until the field reaches its cap
+      if (Math.random() < 0.003 && cells.length < 70) {
+        const idle = cells.filter(c => c.state === 'idle' && c.born >= 1);
+        if (idle.length) { const c = idle[(Math.random() * idle.length) | 0]; c.state = 'dividing'; c.divT = 0; c.divAng = Math.random() * TAU; }
+      }
+      for (let i = cells.length - 1; i >= 0; i--) {
+        const c = cells[i];
+        if (c.born < 1) c.born = Math.min(1, c.born + 0.02);
+        // cursor repel
+        const dx = c.x - mouse.x, dy = c.y - mouse.y, d = Math.hypot(dx, dy);
+        if (d < 140) { const f = (1 - d / 140) * 0.5; c.vx += (dx / (d || 1)) * f; c.vy += (dy / (d || 1)) * f; }
+        // margin spring
+        const pad = c.r * 0.6, soft = c.r + 40;
+        if (c.x < soft) c.vx += (soft - c.x) * 0.004; else if (c.x > w - soft) c.vx -= (c.x - (w - soft)) * 0.004;
+        if (c.y < soft) c.vy += (soft - c.y) * 0.004; else if (c.y > h - soft) c.vy -= (c.y - (h - soft)) * 0.004;
+        // jitter + damping + cap
+        c.vx += (Math.random() - 0.5) * 0.006; c.vy += (Math.random() - 0.5) * 0.006;
+        c.vx *= 0.96; c.vy *= 0.96;
+        const sp = Math.hypot(c.vx, c.vy), cap = 0.6;
+        if (sp > cap) { c.vx = c.vx / sp * cap; c.vy = c.vy / sp * cap; }
+        c.x += c.vx; c.y += c.vy;
+        // hard clamp
+        if (c.x < pad) { c.x = pad; if (c.vx < 0) c.vx *= -0.4; } else if (c.x > w - pad) { c.x = w - pad; if (c.vx > 0) c.vx *= -0.4; }
+        if (c.y < pad) { c.y = pad; if (c.vy < 0) c.vy *= -0.4; } else if (c.y > h - pad) { c.y = h - pad; if (c.vy > 0) c.vy *= -0.4; }
+        // grow back toward target
+        if (c.r < c.tr) c.r = Math.min(c.tr, c.r + (c.tr - c.r) * 0.02 + 0.02);
+        const br = c.r * (1 + 0.02 * Math.sin(t * 0.0012 + c.ph));
+        const alpha = c.born;
+        if (c.state === 'dividing') {
+          c.divT += 0.0056;
+          const e = c.divT * c.divT * (3 - 2 * c.divT);
+          const ax = Math.cos(c.divAng), ay = Math.sin(c.divAng);
+          const sep = e * br * 1.15, lobeR = br * (1 - 0.16 * e);
+          const lobeMul = 0.5 + 0.5 * e;
+          if (e > 0.04 && e < 0.97) {
+            ctx.fillStyle = `rgba(${c.col},${0.26 * alpha})`;
+            ctx.beginPath();
+            ctx.ellipse(c.x, c.y, sep * 0.5 + lobeR * 0.35, lobeR * (1 - e * 0.92), c.divAng, 0, TAU);
+            ctx.fill();
+          }
+          paintBody(c, c.x + ax * sep * 0.5, c.y + ay * sep * 0.5, lobeR, alpha, lobeMul);
+          paintBody(c, c.x - ax * sep * 0.5, c.y - ay * sep * 0.5, lobeR, alpha, lobeMul);
+          if (c.divT >= 1) {
+            const dtr = c.tr, startR = dtr * 0.8;
+            const child = makeCell(c.x - ax * br * 0.5, c.y - ay * br * 0.5, startR, c.col);
+            child.tr = dtr; child.vx = c.vx - ax * 0.35; child.vy = c.vy - ay * 0.35; child.born = 0.6;
+            c.r = startR; c.tr = dtr; c.x += ax * br * 0.5; c.y += ay * br * 0.5; c.vx += ax * 0.35; c.vy += ay * 0.35;
+            c.state = 'idle'; c.divT = 0;
+            cells.push(child);
+          }
+        } else {
+          paintBody(c, c.x, c.y, br, alpha);
+        }
+      }
+    }
+
+    // gentle cursor nudge for the portrait
+    function pushPhoto() {
+      if (!photo) return;
+      const r = photo.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      let tx = 0, ty = 0;
+      if (mouseClient.x > -1000) {
+        const dx = cx - mouseClient.x, dy = cy - mouseClient.y, d = Math.hypot(dx, dy) || 0.001, R = 260, MAX = 22;
+        if (d < R) { const f = (1 - d / R); const mag = f * f * MAX; tx = (dx / d) * mag; ty = (dy / d) * mag; }
+      }
+      photoOff.x += (tx - photoOff.x) * 0.08;
+      photoOff.y += (ty - photoOff.y) * 0.08;
+      photo.style.transform = `translate(${photoOff.x.toFixed(2)}px, ${photoOff.y.toFixed(2)}px)`;
+    }
+
+    const mouseClient = { x: -9999, y: -9999 };
+    host.addEventListener('mousemove', (ev) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = ev.clientX - rect.left; mouse.y = ev.clientY - rect.top;
+      mouseClient.x = ev.clientX; mouseClient.y = ev.clientY;
+    });
+    host.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; mouseClient.x = -9999; mouseClient.y = -9999; });
+
+    resize();
+    let rt;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 150); });
+
+    if (reduce) {
+      // static frame only
+      cells.forEach(c => paintBody(c, c.x, c.y, c.r, 1));
+    } else {
+      const t0 = performance.now();
+      (function loop(now) { step(now - t0); pushPhoto(); requestAnimationFrame(loop); })(t0);
+    }
+  })();
 </script>
 
 </body>
